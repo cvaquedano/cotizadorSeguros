@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header'
+import Formulario from './components/Formulario'
 import styled from '@emotion/styled';
 
 const Contenedor = styled.div`
@@ -14,12 +15,18 @@ const ContenedorFormulario = styled.div`
 
 function App() {
   return (
-    <Contenedor>
-      <Header titulo="Cotizador"/>
-    </Contenedor>
-    <ContenedorFormulario>
-      
-    </ContenedorFormulario>
+
+        <Contenedor>
+          <Header titulo="Cotizador"/>
+          <ContenedorFormulario>
+          <Formulario>
+
+          </Formulario>
+
+        </ContenedorFormulario>
+        </Contenedor>
+
+
 
   );
 }
