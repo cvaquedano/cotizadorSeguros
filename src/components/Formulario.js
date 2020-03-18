@@ -49,7 +49,7 @@ const InputRadio = styled.input`
    margin: 0 1rem;
 `;
 
-const Formulario = () => {
+const Formulario = ({setResumen}) => {
     const [datos, setDatos] = useState({
         marca:'',
         year:'',
@@ -80,7 +80,10 @@ const Formulario = () => {
        resultado -= ((diferencia * 3)*resultado)/100;
        resultado *= calcularMarca(marca);
        resultado = parseFloat(calcularPlan(plan) * resultado).toFixed(2);
-
+       setResumen({
+           cotizacion:resultado,
+           datos
+       });
 
     }
     return (
